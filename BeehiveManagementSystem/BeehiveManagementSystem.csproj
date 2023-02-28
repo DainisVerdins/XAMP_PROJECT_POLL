@@ -55,7 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="src\Bee.cs" />
+    <Compile Include="src\EggCare.cs" />
+    <Compile Include="src\HoneyManufacturer.cs" />
     <Compile Include="src\HoneyVault.cs" />
+    <Compile Include="src\NectarCollector.cs" />
+    <Compile Include="src\Queen.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

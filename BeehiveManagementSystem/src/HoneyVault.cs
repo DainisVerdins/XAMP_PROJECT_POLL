@@ -62,6 +62,9 @@ namespace BeehiveManagementSystem.src
             if (amount > 0f) nectar += amount;
         }
 
+        /// <summary>
+        /// Get status report hectar and honey amount and  warning if have one
+        /// </summary>
         public static string StatusReport
         {
             get
