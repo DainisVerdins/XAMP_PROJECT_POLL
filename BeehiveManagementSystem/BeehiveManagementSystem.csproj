@@ -55,12 +55,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="src\Bee.cs" />
-    <Compile Include="src\EggCare.cs" />
-    <Compile Include="src\HoneyManufacturer.cs" />
-    <Compile Include="src\HoneyVault.cs" />
-    <Compile Include="src\NectarCollector.cs" />
-    <Compile Include="src\Queen.cs" />
+    <Compile Include="IWorker.cs" />
+    <Compile Include="Bee.cs" />
+    <Compile Include="EggCare.cs" />
+    <Compile Include="HoneyManufacturer.cs" />
+    <Compile Include="HoneyVault.cs" />
+    <Compile Include="NectarCollector.cs" />
+    <Compile Include="Queen.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -99,6 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

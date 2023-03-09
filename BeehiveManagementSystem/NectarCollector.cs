@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BeehiveManagementSystem.src
+namespace BeehiveManagementSystem
 {
     internal class NectarCollector : Bee
     {

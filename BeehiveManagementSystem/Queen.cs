@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace BeehiveManagementSystem.src
+namespace BeehiveManagementSystem
 {
-    internal class Queen : Bee
+    internal class Queen : Bee, INotifyPropertyChanged
     {
         public string StatusReport { get; private set; }
         protected override void DoJob()
@@ -49,12 +50,14 @@ namespace BeehiveManagementSystem.src
             $"\nEgg count: {eggs:0.0}\nUnassigned workers: {unassignedWorkers:0.0}\n" +
             $"{WorkerStatus("Nectar Collector")}\n{WorkerStatus("Honey Manufacturer")}" +
             $"\n{WorkerStatus("Egg Care")}\nTOTAL WORKERS: {workers.Length}";
+
+            OnPropertyChanged("StatusReport");
         }
 
         private string WorkerStatus(string job)
         {
             int count = 0;
-            foreach (Bee worker in workers)
+            foreach (IWorker worker in workers)
                 if (worker.Job == job) count++;
             string s = "s";
             if (count == 1) s = "";
@@ -63,18 +66,25 @@ namespace BeehiveManagementSystem.src
 
         public override float CostPerShift { get { return 2.15f; } }
 
-        private Bee[] workers = new Bee[0];
+        private IWorker[] workers = new IWorker[0];
 
         private float unassignedWorkers = 3;
         private float eggs;
         private const float EGGS_PER_SHIFT = 0.45f;
         private const float HONEY_PER_UNASSIGNED_WORKER = 0.5f;
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
         /// <summary>
         /// Resize workers array to add to back another worker
         /// </summary>
         /// <param name="worker"> worker bee what is added to array of workers</param>
-        public void AddWorker(Bee worker)
+        public void AddWorker(IWorker worker)
         {
 
             if (unassignedWorkers >= 1)

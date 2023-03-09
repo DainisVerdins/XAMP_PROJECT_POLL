@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BeehiveManagementSystem.src
-{
-    internal class Bee
+namespace BeehiveManagementSystem { 
+    internal class Bee : IWorker
     {
         /// <summary>
         /// Title of the job what bee is doing

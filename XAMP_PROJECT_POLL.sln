@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeehiveManagementSystem", "BeehiveManagementSystem\BeehiveManagementSystem.csproj", "{7872C919-896A-4AD3-981C-6691ED3CA791}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoCardGames", "TwoCardGames\TwoCardGames.csproj", "{599797B6-4EB3-4669-8032-6617CD6D06A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7872C919-896A-4AD3-981C-6691ED3CA791}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7872C919-896A-4AD3-981C-6691ED3CA791}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7872C919-896A-4AD3-981C-6691ED3CA791}.Release|Any CPU.Build.0 = Release|Any CPU
+		{599797B6-4EB3-4669-8032-6617CD6D06A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{599797B6-4EB3-4669-8032-6617CD6D06A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{599797B6-4EB3-4669-8032-6617CD6D06A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{599797B6-4EB3-4669-8032-6617CD6D06A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
